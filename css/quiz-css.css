@@ -1,0 +1,1024 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background:  rgba(50, 158, 241, 1);
+  height: 100vh;
+
+}
+
+.book {
+  margin-left: 14%;
+  margin-top: 35px;
+  height: 280px;
+  width: 220px;
+  background-color: rgb(255, 42, 42);
+  border: 3px solid gray;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 13px;
+  position: relative;
+  transform: rotate(-6deg) scale(.7);
+  opacity: .85;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  animation: bookentrance 2.8s ease 1,
+  floatbook 2s 2.8s linear infinite;
+}
+
+@keyframes bookentrance {
+  from {
+    left: -60%;
+  }
+
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes floatbook {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px) rotate(-6deg) scale(.7);
+  }
+
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px) rotate(-6deg) scale(.7);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px) rotate(-6deg) scale(.7);
+  }
+}
+
+.book::before {
+  content: '';
+  height: 278px;
+  width: 40px;
+  background-color: rgb(209, 46, 46);
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 16px;
+  position: absolute;
+}
+
+.book::after {
+  content: '';
+  height: 30px;
+  width: 217px;
+  border: 3px solid gray;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 8px;
+  position: absolute;
+  margin-top: 125px;
+  background-image: linear-gradient(to bottom, whitesmoke 6px, rgb(165, 165, 165) 1px, whitesmoke 8px, rgb(167, 167, 167) 1px, whitesmoke 12px, rgb(187, 187, 187) 1px, whitesmoke 18px, rgb(167, 167, 167) 1px, whitesmoke 20px, rgb(173, 173, 173) 1px, whitesmoke 24px, rgb(192, 192, 192) 1px, whitesmoke 30px, rgb(165, 165, 165) 1px, transparent 32px, rgb(177, 177, 177) 1px, #E4E0CE 36px, rgb(88, 88, 88) 1px, transparent 42px, gray 1px, transparent 44px, gray 1px, #E4E0CE 48px, rgb(32, 32, 32) 1px);
+}
+
+.book p {
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+  font-style: oblique;
+  color: #dfe6eb;
+  padding-top: 35px;
+  letter-spacing: 3px;
+  text-decoration: wavy;
+}
+
+.cup {
+  background-color: rgb(236, 236, 191);
+  height: 110px;
+  width: 130px;
+  margin-left: 85%;
+  margin-top: -100px;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 35%;
+  border-top-left-radius: -35%;
+  border-top-right-radius: 10%;
+  border-top-left-radius: 10%;
+  position: relative;
+  animation: cupentrance 3s ease 1,
+             floatcup 3.2s 3.4s linear infinite;
+
+}
+
+@keyframes cupentrance {
+  from {
+    right: -500%;
+  }
+
+  to {
+    right: 0%;
+  }
+}
+
+
+@keyframes floatcup {
+  0% {
+    box-shadow: 0 5px 10px 0px rgba(41, 41, 41, 0.6);
+    transform: translatey(0px) rotate(-3deg);
+  }
+
+  50% {
+    box-shadow: 0 25px 20px 0px rgba(41, 41, 41, 0.6);
+    transform: translatey(-15px) rotate(4deg);
+  }
+
+  75% {
+    box-shadow: 0 25px 20px 0px rgba(41, 41, 41, 0.6);
+    transform: translatey(-15px) rotate(-1deg);
+  }
+
+  100% {
+    box-shadow: 0 5px 10px 0px rgba(41, 41, 41, 0.6);
+    transform: translatey(0px) rotate(0deg);
+  }
+}
+
+.cup::before{
+content:"";
+position: absolute;
+height: 100px;
+width: 122.5px;
+margin-left: 3%;
+margin-top: 10%;
+border-bottom-left-radius: 80%;
+border-bottom-right-radius: 80%;
+border-left: 2px solid rgb(204, 192, 144);
+border-right: 2.5px solid rgb(192, 180, 132);
+}
+
+.cup::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(182, 182, 131);
+  height: 10px;
+  width: 200px;
+  margin-left: -35px;
+  margin-top: 65%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border: 2px solid rgb(182, 166, 102);
+}
+
+
+.coffee{
+  background-color: hsla(0, 35%, 17%, 0.769);
+  height: 20px;
+  width: 120px;
+  margin-left: 3%;
+  margin-top: 2%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 70%;
+}
+
+.vapour {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+.vapour span {
+  position: relative;
+  bottom: 50px;
+  display: block;
+  margin: 0 2px 50px;
+  min-width: 8px;
+  height: 120px;
+  background: whitesmoke;
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  opacity: .5;
+  filter: blur(15px);
+  animation-delay: calc(var(--v) * -1s);
+}
+
+@keyframes animate {
+  0% {
+      transform: translateY(0) scaleX(1);
+      opacity: 0;
+  }
+  15% {
+      opacity: 1;
+  }
+  50% {
+      transform: translateY(-150px) scaleX(5);
+  }
+  95% {
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(-300px) scaleX(6);
+      opacity: 0;
+  }
+}
+
+.card {
+  margin-top: -100px;
+  display: block;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 199) 29px, rgba(128, 128, 128, 0.678) 2px);
+  background-size: 100% 30px;
+  border-radius: 5px;
+  padding: 20px;
+  animation: welcomecard 3s ease 1;
+}
+
+@keyframes welcomecard {
+  from {
+    margin-top: -1000px;
+  }
+
+  to {
+    margin-top: -100px;
+  }
+}
+
+.card,
+.card::before,
+.card::after {
+  /* Styles to distinguish sheets from one another */
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  height: 95%;
+  width: 99%;
+  background-color: beige;
+}
+
+.card::before {
+  right: 15px;
+  top: 0;
+  transform: rotate(-1deg);
+  z-index: -1;
+}
+
+.card::after {
+  top: 5px;
+  right: -5px;
+  transform: rotate(1deg);
+  z-index: -2;
+}
+
+.card h1 {
+  font-family: 'Roboto Slab';
+  font-size: 28px;
+  color: #1c70b1;
+  padding: 10px;
+}
+
+.card p {
+  padding: 20px;
+  font-family: 'Roboto';
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #414141;
+}
+
+.welcome .card button {
+  background-color: #5ecc8183;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Roboto Slab';
+  font-size: 14px;
+  padding: 12px;
+  opacity: .85;
+  animation-name: buttonanimation;
+  animation-delay: 3.2s;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes buttonanimation {
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.welcome .card button:hover,
+.welcome .card button:active,
+#finishquiz button:hover {
+  background-color: #5ecc81;
+  color: white;
+  opacity: 1;
+}
+
+.syringe {
+  height: 220px;
+  width: 40px;
+  border: 1px solid gray;
+  margin-top: -200px;
+  margin-left: 5%;
+  margin-right: 95%;
+  transform: rotate(15deg) scale(.6);
+  background-color: rgb(231, 231, 231);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  opacity: .85;
+  animation: syringeentrance 3.1s ease 1,
+             floatsyringe 2.4s 3.1s linear infinite;
+}
+
+@keyframes syringeentrance {
+  from {
+    margin-left: -50%;
+  }
+
+  to {
+    margin-left: 5%;
+  }
+}
+
+@keyframes floatsyringe {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px) rotate(15deg) scale(.6);
+  }
+
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-15px) rotate(15deg) scale(.6);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px) rotate(15deg) scale(.6);
+  }
+}
+
+.needle {
+  height: 80px;
+  width: 4px;
+  background-color: rgb(105, 105, 105);
+  margin-right: 50%;
+  margin-left: 45%;
+  transform: translate(-30%, -120%);
+  border-top-right-radius: 25px;
+}
+
+.hub {
+  background-color: rgb(238, 238, 238);
+  border: 1px solid gray;
+  width: 15px;
+  height: 18px;
+  transform: translate(-112%, -540%);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: 75%;
+}
+
+.red-fill {
+  height: 200px;
+  width: 33px;
+  background-color: rgb(214, 62, 62);
+  transform: translate(8%, -48%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.plunger {
+  height: 90px;
+  width: 25px;
+  background-color: rgb(238, 238, 238);
+  border: 1px solid gray;
+  transform: translate(25%, -87%);
+}
+
+.plunger::after {
+  content: '';
+  height: 5px;
+  width: 50px;
+  background-color: rgb(238, 238, 238);
+  border: 1px solid gray;
+  margin-top: 90px;
+  margin-left: -12.5px;
+  position: absolute;
+  z-index: 1;
+}
+
+.pencil {
+  height: 25px;
+  width: 280px;
+  top: -20%;
+  margin-left: 65%;
+  background-color: rgb(240, 187, 55);
+  border-top: 8px solid rgb(241, 213, 147);
+  border-bottom: 8px solid rgb(241, 213, 147);
+  transform: rotate(-75deg) scale(.75) scaleY(1.1);
+  opacity: .85;
+  position: relative;
+  animation: pencilentrance 3s ease 1,
+    floatpencil 2.3s 3s linear infinite;
+}
+
+@keyframes pencilentrance {
+  from {
+    right: -86%;
+  }
+
+  to {
+    right: 0%;
+  }
+}
+
+@keyframes floatpencil {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px) rotate(-75deg) scale(.75) scaleY(1.1);
+  }
+
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-15px) rotate(-75deg) scale(.75) scaleY(1.1);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px) rotate(-75deg) scale(.75) scaleY(1.1);
+  }
+}
+
+.pencil-top {
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  border-top: 16px solid transparent;
+  border-right: 38px solid beige;
+  border-bottom: 10px solid transparent;
+  transform: translate(-100%, -32%);
+}
+
+.pencil-top::before {
+  content: "";
+  width: 5px;
+  height: 0px;
+  position: absolute;
+  border-top: 2px solid transparent;
+  border-right: 15px solid black;
+  border-bottom: 2px solid transparent;
+  transform: translate(-80%, -73.5%);
+}
+
+.pencil p {
+  position: absolute;
+  line-height: 10px;
+  font-family: 'Arial';
+  margin-left: 30%;
+  color: gray;
+}
+
+.ferrule {
+  height: 25px;
+  width: 25px;
+  background-color: rgba(192, 192, 192, 0.747);
+  border-top: 8px solid silver;
+  border-bottom: 8px solid rgba(192, 192, 192, 0.747);
+  transform: translate(1118%, -30.5%);
+}
+
+.eraser {
+  height: 25px;
+  width: 20px;
+  background-color: salmon;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: translate(1500%, -131.5%);
+}
+
+.testtube {
+  height: 220px;
+  width: 40px;
+  background-color: rgb(231, 231, 231);
+  margin-top: -100px;
+  margin-left: 13%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: 1px solid gray;
+  opacity: .85;
+  transform: rotate(-12deg) scale(.75);
+  animation: testtubeentrance 2.2s ease 1,
+    floattesttube 2.5s 3s linear infinite;
+}
+
+@keyframes testtubeentrance {
+  from {
+    margin-left: -60%;
+  }
+
+  to {
+    margin-left: 13%;
+  }
+}
+
+@keyframes floattesttube {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px) rotate(-12deg) scale(.75);
+  }
+
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-15px) rotate(-12deg) scale(.75);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px) rotate(-12deg) scale(.75);
+  }
+}
+
+.fill {
+  height: 190px;
+  width: 33px;
+  background: rgb(156, 235, 82);
+  transform: translate(8%, 14%);
+  border-top-left-radius: 10% 100%;
+  border-top-right-radius: 10% 100%;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  z-index: 1;
+}
+
+.bubbles-1 {
+  position: absolute;
+  height: 5%;
+  width: 35%;
+  top: 30%;
+  right: 27%;
+  border-radius: 50%;
+  background: rgb(95, 218, 116);
+}
+
+.bubbles-2 {
+  position: absolute;
+  height: 5%;
+  width: 30%;
+  top: 40%;
+  left: 20%;
+  border-radius: 50%;
+  background: rgb(95, 218, 116);
+}
+
+.bubbles-3 {
+  position: absolute;
+  height: 5%;
+  width: 30%;
+  top: 50%;
+  right: 20%;
+  border-radius: 50%;
+  background: rgb(95, 218, 116);
+}
+
+.bubbles-4 {
+  position: absolute;
+  height: 5%;
+  width: 28%;
+  top: 60%;
+  left: 10%;
+  border-radius: 50%;
+  background: rgb(95, 218, 116);
+}
+
+.bubbles-5 {
+  position: absolute;
+  height: 5%;
+  width: 28%;
+  top: 70%;
+  right: 15%;
+  border-radius: 50%;
+  background: rgb(95, 218, 116);
+}
+
+.bubbles-6 {
+  position: absolute;
+  height: 5%;
+  width: 32%;
+  top: 80%;
+  left: 20%;
+  border-radius: 50%;
+  background: rgb(95, 218, 116);
+}
+
+.bubbles-7 {
+  position: absolute;
+  height: 5%;
+  width: 32%;
+  top: 90%;
+  right: 23%;
+  border-radius: 50%;
+  background: rgb(95, 218, 116);
+}
+
+
+#quiz-header {
+  display: none;
+  margin-right: 0%;
+  margin-left: 60%;
+  padding: 20px;
+}
+
+#quiz-header button {
+  border-radius: 5px;
+  display: inline;
+  background-color: #5ecc81;
+  color: white;
+  width: 50px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+#quiz-header button:hover,
+#quiz-header button:active {
+  background-color: #e44e57;
+}
+
+
+#quizcard {
+  display: none;
+  margin-top: 20%;
+}
+
+#question {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.quizcontent input,
+.quizcontent label {
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.modal {
+  background: rgba(126, 126, 126, 0.425);
+  font-family: 'Roboto Slab';
+  font-size: 16px;
+  color: #333333;
+}
+
+.modal-dialog {
+  margin-top: 8%;
+  margin-bottom: 3%;
+}
+
+#finishquiz {
+  display: none;
+  background: #f7fcff;
+  text-align: center;
+  margin-top: 5%;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+#finishquiz button {
+  background-color: #5ecc81e3;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Roboto Slab';
+  font-size: 14px;
+  padding: 12px;
+}
+
+img {
+  height: 100px;
+  width: 80px;
+  display: none;
+}
+
+footer {
+  
+  color: #333333;
+  font-family: 'Roboto';
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(245, 245, 220, 0.562);
+  border-top-right-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  animation-name: footerentrance;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
+@keyframes footerentrance {
+  from {
+    left: -86%;
+  }
+
+  to {
+    left: 0%;
+  }
+}
+
+footer a {
+  font-family: 'Roboto Slab';
+  text-decoration: underline;
+  letter-spacing: normal;
+}
+
+footer span {
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 320px) {
+
+
+  .pencil, .cup, .syringe, .book, .testtube, footer{
+   visibility: hidden;
+  }
+
+  #welcomecard{
+   margin-top: -250px;
+  }
+
+
+  @keyframes welcomecard {
+    from {
+      margin-top: -1000px;
+    }
+  
+    to {
+      margin-top: -250px;
+    }
+  }
+
+  #quiz-header{
+   margin-left: 15%;
+  }
+
+
+   #quizcard{
+   margin-top: 0%;
+   margin-bottom: 10%;
+  }
+
+  #quizcard h1{
+    font-size: 18px;
+  }
+
+  #question{
+    font-size: 16px;
+    padding: 2px;
+  }
+
+  #question label {
+    font-size: 14px;
+  }
+
+}
+
+
+@media only screen and (min-width: 375px) {
+
+   
+  .pencil, .cup, .syringe, .book, .testtube, footer{
+   visibility: hidden;
+  }
+
+  #welcomecard{
+   margin-top: -275px;
+  }
+
+
+  @keyframes welcomecard {
+    from {
+      margin-top: -1000px;
+    }
+  
+    to {
+      margin-top: -275px;
+    }
+  }
+
+  #quiz-header{
+    margin-top: -5%;
+    margin-left: 20%;
+  }
+
+   #quizcard{
+   margin-top: -3%;
+   margin-bottom: 10%;
+  }
+
+  #quizcard h1{
+    font-size: 17px;
+  }
+
+  #question{
+    font-size: 14px;
+    padding: 2px;
+  }
+
+  #question label {
+    font-size: 12px;
+  }
+
+}
+
+@media only screen and (min-width: 568px) {
+
+   
+  .pencil, .cup, .syringe, .book, .testtube, footer{
+   visibility: hidden;
+  }
+
+  #welcomecard{
+   margin-top: -260px;
+  }
+
+
+  @keyframes welcomecard {
+    from {
+      margin-top: -1000px;
+    }
+  
+    to {
+      margin-top: -260px;
+    }
+  }
+
+  #quiz-header{
+    margin-top: -5%;
+    margin-left: 62.5%;
+  }
+
+   #quizcard{
+   margin-top: -1%;
+   margin-bottom: 10%;
+  }
+
+  #quizcard h1{
+    font-size: 17px;
+  }
+
+  #question{
+    font-size: 14px;
+    padding: 2px;
+  }
+
+  #question label {
+    font-size: 12px;
+  }
+
+}
+
+@media only screen and (min-width: 667px) {
+
+   
+  .pencil, .cup, .syringe, .book, .testtube, footer{
+   visibility: hidden;
+  }
+
+  #welcomecard{
+   margin-top: -260px;
+  }
+
+
+  @keyframes welcomecard {
+    from {
+      margin-top: -1000px;
+    }
+  
+    to {
+      margin-top: -260px;
+    }
+  }
+
+  #quiz-header{
+    margin-top: -5%;
+    margin-left: 60%;
+  }
+
+   #quizcard{
+   margin-top: -1%;
+   margin-bottom: 10%;
+  }
+
+  #quizcard h1{
+    font-size: 17px;
+  }
+
+  #question{
+    font-size: 14px;
+    padding: 2px;
+  }
+
+  #question label {
+    font-size: 12px;
+  }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+   
+  .pencil, .cup, .syringe, .book, .testtube, footer{
+   visibility: hidden;
+  }
+
+  #welcomecard{
+   margin-top: -260px;
+  }
+
+
+  @keyframes welcomecard {
+    from {
+      margin-top: -1000px;
+    }
+  
+    to {
+      margin-top: -260px;
+    }
+  }
+
+  #quiz-header{
+    margin-top: -2%;
+    margin-left: 55%;
+  }
+
+   #quizcard{
+   margin-top: -1%;
+   margin-bottom: 10%;
+  }
+
+  #quizcard h1{
+    font-size: 17px;
+  }
+
+  #question{
+    font-size: 14px;
+    padding: 2px;
+  }
+
+  #question label {
+    font-size: 12px;
+  }
+
+}
+
+
+@media only screen and (min-width: 900px) {
+
+  .pencil, .cup, .syringe, .book, .testtube, footer{
+    visibility: visible;
+   }
+   
+   #welcomecard{
+    margin-top: -100px;
+   }
+
+   @keyframes welcomecard {
+    from {
+      margin-top: -1000px;
+    }
+  
+    to {
+      margin-top: -100px;
+    }
+  }
+
+  #quiz-header{
+    margin-top: 5%;
+    margin-left: 55%;
+  }
+
+   #quizcard{
+   margin-top: -1%;
+   margin-bottom: 10%;
+  }
+
+  #quizcard h1{
+    font-size: 20px;
+  }
+
+  #question{
+    font-size: 20px;
+    padding: 4px;
+  }
+
+  #question label {
+    font-size: 14px;
+  }
+}

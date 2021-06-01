@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/calculator-css.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator container">
+    <table>
+        <tr>
+        <th colspan="4"><input type="text"id="display" value="" maxlength="12" onkeypress="enterEquals()" autofocus></th>
+        </tr>
+        <br>
+        <tr>
+         <td><button class="btn" id="clear" onclick="clearVal()">AC</button></td>
+         <td><button class="btn" id="back" onclick="back()"><<</button></td>
+         <td><button class="btn" id="remainder" onclick="displayVal('%')">%</button></td>
+         <td><button class="btn" id="divide" value="/" onclick="displayVal('/')"">/</button></td>
+        </tr>
+        <tr>
+         <td><button class="btn" id="7" value="7" onclick="displayVal(7)">7</td>
+         <td><button class="btn" id="8" value="8" onclick="displayVal(8)">8</button></td>
+         <td><button class="btn" id="9" value="9"  onclick="displayVal(9)">9</button></td>
+         <td><button class="btn" id="multiply" value="*" onclick="displayVal('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn" id="4" value="4"  onclick="displayVal(4)">4</button></td>
+            <td><button class="btn" id="5" value="5"  onclick="displayVal(5)">5</button></td>
+            <td><button class="btn" id="6" value="6"  onclick="displayVal(6)">6</button></td>
+            <td><button class="btn" id="subtract" value="-" onclick="displayVal('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn" id="1" value="1"  onclick="displayVal(1)">1</button></td>
+            <td><button class="btn" id="2" value="2"  onclick="displayVal(2)">2</button></td>
+            <td><button class="btn" id="3" value="3"  onclick="displayVal(3)">3</button></td>
+            <td><button class="btn" id="add" onclick="displayVal('+')">+</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button class="btn" id="0" value="0" onclick="displayVal(0)">0</button></td>
+            <td><button class="btn" id="decimal" value="." onclick="displayVal('.')">.</button></td>
+            <td><button class="btn" id="equals" value="=" onclick="calculate()">=</button></td>
+        </tr>
+    </table>
+    </div>
+
+    <script src="js/calculator-js.js"></script>
+
+</body>
+</html>
