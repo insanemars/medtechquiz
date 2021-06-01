@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/quiz-css.css" type="text/css">
+
+    <title>Medical Technology Quiz</title>
+</head>
+<body>
+<section>
+
+<!--Book-->
+<div class="book">
+  <p  class="text-center">Science<br>and<br>Technology</p>
+</div>
+
+
+
+
+
+<!--Welcome-->
+<div class="welcome container">
+
+<div class="col-xl-6 col-lg-8 col-md-8 col-sm-12 ml-auto mr-auto">
+<div class="card text-center" id="welcomecard">
+<h1>Welcome to MedTech Quiz App</h1>
+<p>Ready to take the quiz?</p>
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ml-auto mr-auto">
+<button id="enterbutton" type="submit" class="form-control form-control-sm" onclick="startQuiz()">Click to enter</button>
+</div>
+</div>
+
+
+</div>
+</div>
+
+<!--Pencil-->
+<div class="pencil" id="yellow-pencil">
+  <div class="pencil-top"></div>
+  <p>Pencil No. 2</p>
+  <div class="ferrule"></div>
+  <div class="eraser"></div>
+  </div>
+ 
+
+<div class="syringe">
+  <div class="needle"></div>
+  <div class="hub"></div>
+  <div class="red-fill"></div> 
+  <div class="plunger"></div>
+</div>
+
+ <!--Test Tube-->
+<div class="testtube" id="test-tube">
+ <div class="fill">
+   <div class="bubbles-1"></div>
+   <div class="bubbles-2"></div>
+   <div class="bubbles-3"></div>
+   <div class="bubbles-4"></div>
+   <div class="bubbles-5"></div>
+   <div class="bubbles-6"></div>
+   <div class="bubbles-7"></div>
+ </div>
+</div>
+
+<!--Coffee Cup-->
+<div class="steam"></div>
+<div class="cup">
+  <div class="coffee">
+    <div class="vapour">
+        <span style="--v:1;"></span>
+        <span style="--v:2;"></span>
+        <span style="--v:5;"></span>
+        <span style="--v:4;"></span>
+        <span style="--v:6;"></span>
+        <span style="--v:19;"></span>
+        <span style="--v:7;"></span>
+        <span style="--v:8;"></span>
+        <span style="--v:9;"></span>
+        <span style="--v:10;"></span>
+        <span style="--v:11;"></span>
+        <span style="--v:18;"></span>
+    </div>
+  </div>
+  </div>
+
+
+<!--Quiz Header-->
+   <div class="header container">
+       <div class="quizheader" id="quiz-header">
+      <button type="button" class="form-control form-control-sm" id="calculator" onclick="window.open('calculator.html', '', 'width=330,height=470')"><i class="fas fa-calculator"></i></button>
+      <button type="button" class="form-control form-control-sm" id="closequestionbox" onclick="closeWindow()"><i class="fas fa-times"></i></button>
+      <button type="button" class="form-control form-control-sm" id="nextquestionbox" onclick="nextQues()"><i class="fas fa-angle-double-right"></i></button>
+    </div>
+</div>
+
+<!--Quiz-->
+<div class="quiz container">
+    <div class="col-xl-6 col-md-8 col-lg-6 col-sm-12 ml-auto mr-auto">
+    <div class="card" id="quizcard">
+        <h1>Question <span id="quiznumber">   </span> of <span id="totalquiznumber">   </span></h1>
+        <div class="quizcontent">
+         <p id="question"></p> 
+          <input type="radio" name="answer" id="letterA" value="0"> <label id="choiceA"></label>
+          <br>
+          <input type="radio" name="answer" id="letterB" value="1"> <label id="choiceB"></label>
+          <br>
+          <input type="radio" name="answer" id="letterC" value="2"> <label id="choiceC"></label>
+          <br>
+          <input type="radio" name="answer" id="letterD" value="3"> <label id="choiceD"></label>
+          <br>
+          <input type="radio" name="answer" id="letterE" value="4"> <label id="choiceE"></label>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!--Select an Answer Dialog Box-->
+<div class="modal" tabindex="-1" role="dialog" id="selectanswer">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+            <button type="button" class="close" onclick="hidedialog()" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <br>
+              <br>
+          <h6>Please SELECT AN ANSWER to proceed.</h6>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Exit Dialog Box-->
+    <div class="modal" tabindex="-1" role="dialog" id="exit">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+        <div class="modal-body text-center">
+                <h4 class="mt-2">Are you sure you want to exit the quiz?</h4>
+                <br>
+                <p>Progress will not be saved.</p>
+                <br>
+                <button type="button" class="btn btn-danger" name="yes" id="yes">Yes</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" name="no" id="no">No</button>
+           </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Finished Quiz-->
+  <div class="container">
+    <div class="finishquizcontainer" id="finishquiz">
+     <h2>Yeay! You've finished the quiz.</h2>
+     <br>
+      <p>Click button below to show your score.</p>
+      <br>
+      <br>
+      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 ml-auto mr-auto">
+       <button type="button" class="form-control form-control-sm" name="checkscore" onclick="showScore()" >Show my score</button>
+      </div>
+    </div>
+   </div>
+
+   <div class="modal" id="myscore" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content text-center p-4">
+        <div class="scorecontainer">
+          <div class="score-content">
+             <img src="images/quality.svg" alt="medal" id="medal">
+             <img src="images/sad.svg" alt="sadface" id="sadface">
+             <h2 id="showscore">You got <span id="userscore" name="userscore"></span> out of 10 questions.</h2>
+             <br>
+             <p id="showscorenote"></p>
+             <br>
+             <br>
+             <a type="button" name="retake" id="retake" class="btn" href="quiz.html">Take Quiz again</a>
+             <br>
+             <br>
+             <a type="button" class="btn btn-success" name="exitquiz" id="exitquiz" href="window.close()">Exit</a>
+           
+          </div>
+      
+      
+         </div>   
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+</body>
+<footer class="pt-1 pl-2 pr-2">
+  <p>Created by: <br>Marisse</a>
+ <br><span>ProjectDotM 2021</span>
+ <br>
+ <a href="www.twitter.com/insanemarscodes"><i class="bi bi-twitter"></i></a></p>
+
+ </footer>
+
+
+
+    
+
+
+   
+    <script src="js/style-js.js"></script>
+    <script src="js/quiz-js.js"></script>
+
+</html>
